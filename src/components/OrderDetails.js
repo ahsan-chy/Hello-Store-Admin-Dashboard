@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import {  Container, Grid } from '@mui/material'
+import {  Container } from '@mui/material'
 import Grid2 from '@mui/material/Unstable_Grid2/Grid2'
 import { useParams } from 'react-router-dom'
 import Breadcrumb from './Breadcrumb'
@@ -142,28 +142,80 @@ useEffect(()=>{
                         <TableRow>
                         <TableCell><span>Order Status</span></TableCell>
                         <TableCell align='right'>
+                        {/* <>
+                        {status === 'pending' ?
+                            <img
+                                src="https://cdn-icons-png.flaticon.com/512/833/833643.png"
+                                style={{width:'40px', marginTop:'10px' }}
+                                alt='paid-icon'
+                                
+                             />
+                        : status === 'accepted' ?
+                            <img
+                                src="https://cdn-icons-png.flaticon.com/512/5360/5360039.png"
+                                style={{width:'40px', marginTop:'10px' }}
+                                alt='canceled-icon'
+                             />
+                        : status === 'delivered' ?
+                            <img
+                                src="https://cdn-icons-png.flaticon.com/512/8905/8905668.png"
+                                style={{width:'40px', marginTop:'10px' }}
+                                alt='completed-icon'
+                             />
+                        : status === 'completed' ?
+                        <img
+                            src="https://cdn-icons-png.flaticon.com/512/8968/8968525.png"
+                            style={{width:'40px', marginTop:'10px' }}
+                            alt='completed-icon'
+                         /> 
+                        :status === 'cancelled' ?
+                        <img
+                            src="https://cdn-icons-png.flaticon.com/512/2763/2763138.png"
+                            style={{width:'40px', marginTop:'10px' }}
+                            alt='completed-icon'
+                         />
+                        :null}
+                             </> */}
                             <FormControl sx={{ m: 1, }} size="small">
                             <InputLabel id="demo-select-small">Order Status</InputLabel>
                             <Select
                                 labelId="demo-select-small"
                                 id="demo-select-small"
-                                // value={age}
                                 label="Order Status"
                                 onChange={(e) => setStatus(e.target.value)}
                                 defaultValue={orderData[0].attributes.orderStatus}
                             >
-                                {/* <MenuItem value="">
-                                <em>None</em>
-                                </MenuItem> */}
-                                <MenuItem value="pending">pending</MenuItem>
-                                <MenuItem value="accepted">accepted</MenuItem>
-                                <MenuItem value="delivered">delivered</MenuItem>
-                                <MenuItem value="cancelled">cancelled</MenuItem>
-                                <MenuItem value="completed">completed</MenuItem>
+                                <MenuItem value="pending">pending &nbsp; <img
+                                src="https://cdn-icons-png.flaticon.com/512/833/833643.png"
+                                style={{width:'18px', marginTop:'5px', marginLeft:'auto' }}
+                                alt='paid-icon'/></MenuItem>
+                                <MenuItem value="accepted">accepted  &nbsp;<img
+                                src="https://cdn-icons-png.flaticon.com/512/5360/5360039.png"
+                                style={{width:'21px', marginTop:'5px', marginLeft:'auto' }}
+                                alt='paid-icon'/></MenuItem>
+                                <MenuItem value="delivered">delivered &nbsp;<img
+                                src="https://cdn-icons-png.flaticon.com/512/8905/8905668.png"
+                                style={{width:'18px', marginTop:'5px', marginLeft:'auto' }}
+                                alt='paid-icon'/></MenuItem>
+                                <MenuItem value="cancelled">cancelled &nbsp;<img
+                                src="https://cdn-icons-png.flaticon.com/512/2763/2763138.png"
+                                style={{width:'18px', marginTop:'5px', marginLeft:'auto' }}
+                                alt='paid-icon'/></MenuItem>
+                                <MenuItem value="completed">completed &nbsp;<img
+                                src="https://cdn-icons-png.flaticon.com/512/8968/8968525.png"
+                                style={{width:'18px', marginTop:'5px', marginLeft:'auto' }}
+                                alt='paid-icon'/></MenuItem>
                             </Select>
                             </FormControl>
+                            
                         </TableCell>
                         </TableRow>
+                        <TableRow>
+                            
+                        
+                        </TableRow>
+
+
 
                     </TableBody>
                 </Table>
