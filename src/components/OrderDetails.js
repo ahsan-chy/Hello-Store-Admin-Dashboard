@@ -20,8 +20,6 @@ import { toast } from 'react-toastify'
 
 const OrderDetails = () => {
     const [singleProduct, setSingleProduct] = useState("")
-    let [productData, setProductData] = useState([])
-    let [productFilter, setProductFilter] = useState([])
     const [orderData, setOrderData] = useState([])
     const [status, setStatus] = useState();
     const {id} = useParams()
