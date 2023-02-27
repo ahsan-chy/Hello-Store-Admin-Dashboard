@@ -4,8 +4,8 @@
 
 React Dashboard is an admin template dashboard based on React.
 
-![React-Dashboard](https://user-images.githubusercontent.com/32510139/181506432-dd67d4cc-31ae-40d6-8415-29b111e247b5.gif)
 
+https://user-images.githubusercontent.com/85479513/221487208-b7e71ce9-61f4-4482-a1fb-d691a0aa0aa3.mp4
 
 ## Table of Contents
 
